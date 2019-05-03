@@ -1,0 +1,447 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\fswiss\fprq2\fcharset0 Arial;}{\f2\fmodern\fprq1\fcharset0 Courier New;}}
+{\colortbl ;\red0\green128\blue0;\red96\green64\blue32;\red0\green32\blue128;\red255\green255\blue255;}
+{\stylesheet{ Normal;}{\s1 heading 1;}{\s2 heading 2;}{\s3 heading 3;}{\s4 heading 4;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\cbpat4\shading1000{\pntext\f0 1)\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta)}}
+\keepn\fi-360\li5040\sb30\sa60\sl276\slmult1\qj\tqc\tx4320\tqr\tx8640\tqc\tx4320\tqr\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tqr\tldot\tx8640\tx360\tx720\tx1080\tx1440\tx1800\tx2160\tx2520\tx2880\tx3240\tx3600\tx3960\tx4320\tx4680\tx5040\f0\fs22\par
+\pard\sa60\qc\f1\fs24\par
+\par
+\par
+\par
+\par
+\par
+\par
+\pard\sb240\sa60\qc\kerning28\b\fs32 Parte 2\par
+\pard\sa60\qc\kerning0\b0\fs24\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+AUTHOR\par
+Vers\'e3o 1.0\par
+Quinta, 2 de Maio de 2019 \par
+\page\page\pard\keepn\s1\sb240\sa60\kerning36\b\fs36 Sum\'e1rio\par
+\pard\kerning0\b0\f0\fs24\par
+Table of contents\par
+\pard\keepn\s1\sb240\sa60\kerning36\b\f1\fs36\'cdndice dos Componentes\par
+\pard\keepn\s2\sb240\sa60\kerning28\fs28 Lista de Classes\par
+\pard\kerning0\b0\f0\fs22 Aqui est\'e3o as classes, estruturas, uni\'f5es e interfaces e suas respectivas descri\'e7\'f5es:\fs24\par
+\pard\li360\sb27\sa27\tqr\tldot\tx8640\b\fs20 Sculptor \b0  \tab pagenum\par
+\par
+\pard\keepn\s1\sb240\sa60\kerning36\b\f1\fs36\'cdndice dos Arquivos\par
+\pard\keepn\s2\sb240\sa60\kerning28\fs28 Lista de Arquivos\par
+\pard\kerning0\b0\f0\fs22 Esta \'e9 a lista de todos os arquivos e suas respectivas descri\'e7\'f5es:\fs24\par
+\pard\li360\sb27\sa27\tqr\tldot\tx8640\b\fs20 Documenta\'e7\'e3o2/sculptor.cpp \b0  \tab pagenum\par
+\par
+\pard\keepn\s1\sb240\sa60\kerning36\b\f1\fs36 Classes\par
+\pard\keepn\s2\sb240\sa60\kerning28\fs28 Refer\'eancia da Classe Sculptor\par
+\pard\keepn\s3\sb240\sa60\kerning0\fs24 Membros P\'fablicos\par
+\pard{\pntext\f0 1)\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta)}}
+\fi-360\li360\tx360\f0\fs20 Sculptor\b0  (int nx, int ny, int nz)\par
+\b{\pntext\f0 2)\tab}~Sculptor\b0  ()\par
+{\pntext\f0 3)\tab}void \b setColor\b0  (float _r, float _g, float _b, float _a)\par
+{\pntext\f0 4)\tab}void \b print\b0  ()\par
+{\pntext\f0 5)\tab}void \b printMatriz\b0  ()\par
+{\pntext\f0 6)\tab}void \b putVoxel\b0  (int x, int y, int z)\par
+{\pntext\f0 7)\tab}void \b cutVoxel\b0  (int x, int y, int z)\par
+{\pntext\f0 8)\tab}void \b putBox\b0  (int x0, int x1, int y0, int y1, int z0, int z1)\par
+{\pntext\f0 9)\tab}void \b cutBox\b0  (int x0, int x1, int y0, int y1, int z0, int z1)\par
+{\pntext\f0 10)\tab}void \b putSphere\b0  (int xcenter, int ycenter, int zcenter, int radius)\par
+{\pntext\f0 11)\tab}void \b cutSphere\b0  (int xcenter, int ycenter, int zcenter, int radius)\par
+{\pntext\f0 12)\tab}void \b putEllipsoid\b0  (int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)\par
+{\pntext\f0 13)\tab}void \b cutEllipsoid\b0  (int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)\par
+{\pntext\f0 14)\tab}void \b writeOFF\b0  (string filename)\par
+{\pntext\f0 15)\tab}void \b writeVECT\b0  (string filename)\par
+\pard\brdrb\brdrs\brdrw5\brsp20 \fs24\par
+\pard\keepn\s3\sb240\sa60\b\f1 Descri\'e7\'e3o detalhada\par
+\pard\sb30\sa60\qj\b0\f0\fs22 Classe usada para esbo\'e7ar o desenho \par
+\pard\brdrb\brdrs\brdrw5\brsp20 \fs24\par
+\pard\keepn\s3\sb240\sa60\b\f1 Construtores e Destrutores\par
+\pard\keepn\s4\sb240\sa60\fs20 Sculptor::Sculptor (int  \i nx\i0 , int  \i ny\i0 , int  \i nz\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Construtor da Classe \b Sculptor\b0  \par
+\pard\cbpat4\shading1000\li360\f2\fs16    41 \{\par
+   42     nc = nx;\par
+   43     nl = ny;\par
+   44     np = nz;\par
+   45     v = \cf1 new\cf0  Voxel**[np];\par
+   46     v[0] = \cf1 new\cf0  Voxel*[np*nl];\par
+   47     v[0][0] = \cf1 new\cf0  Voxel[nc*nl*np];\par
+   48     v[1] = v[0] + nl*\cf1 sizeof\cf0 (Voxel**);\par
+   49     \cf1 for\cf0 (\cf2 int\cf0  i=1; i<np; i++)\par
+   50     \{\par
+   51         v[i] = v[i-1] + nl;\par
+   52     \}\par
+   53     \cf1 for\cf0 (\cf2 int\cf0  i=1; i<np*nl; i++)\par
+   54     \{\par
+   55         v[0][i] = v[0][i-1] + nc;\par
+   56     \}\par
+   57 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 Sculptor::~Sculptor ()\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Destrutor da Classe \b Sculptor\b0  \par
+\pard\cbpat4\shading1000\li360\f2\fs16    64 \{\par
+   65     \cf1 delete\cf0  v;\par
+   66     \cf1 delete\cf0  v[0];\par
+   67     \cf1 delete\cf0  v[0][0];\par
+   68 \par
+   69 \}\par
+\pard\brdrb\brdrs\brdrw5\brsp20 \b\f1\fs20\par
+\pard\keepn\s3\sb240\sa60\fs24 Fun\'e7\'f5es membros\par
+\pard\keepn\s4\sb240\sa60\fs20 void Sculptor::cutBox (int  \i x0\i0 , int  \i y0\i0 , int  \i z0\i0 , int  \i x1\i0 , int  \i y1\i0 , int  \i z1\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Desativa os voxels em forma de paralelepipedo \par
+\pard\cbpat4\shading1000\li360\f2\fs16   162 \{\par
+  163     \cf2 bool\cf0  _x = \cf1 false\cf0 ;\par
+  164 \par
+  165     \cf1 for\cf0 (\cf2 int\cf0  i = z0; i<=z1; i++)\par
+  166     \{\par
+  167         \cf1 for\cf0 (\cf2 int\cf0  j = y0; j<=y1; j++)\par
+  168         \{\par
+  169             \cf1 for\cf0 (\cf2 int\cf0  k = x0; k<=x1; k++)\par
+  170             \{\par
+  171                 v[i][j][k].isOn = _x;\par
+  172             \}\par
+  173         \}\par
+  174     \}\par
+  175 \par
+  176 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 void Sculptor::cutEllipsoid (int  \i xcenter\i0 , int  \i ycenter\i0 , int  \i zcenter\i0 , int  \i rx\i0 , int  \i ry\i0 , int  \i rz\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Desativa os voxels em forma de um elipsoide \par
+\pard\cbpat4\shading1000\li360\f2\fs16   268 \{\par
+  269     \cf2 bool\cf0  _x = \cf1 false\cf0 ;\par
+  270     \cf2 float\cf0  elipse;\par
+  271 \par
+  272     \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<=zcenter+rz; i++)\par
+  273     \{\par
+  274         \cf1 for\cf0 (\cf2 int\cf0  j = 0; j<=ycenter+ry; j++)\par
+  275         \{\par
+  276             \cf1 for\cf0 (\cf2 int\cf0  k = 0; k<=xcenter+rx; k++)\par
+  277             \{\par
+  278                 elipse = pow(((i-xcenter)/rx),2) + pow(((j-ycenter)/ry),2) + pow(((k-zcenter)/rz),2);\par
+  279                 \cf1 if\cf0 (elipse <=1)\par
+  280                 \{\par
+  281                     v[i][j][k].isOn = _x;\par
+  282                 \}\par
+  283             \}\par
+  284         \}\par
+  285     \}\par
+  286 \par
+  287 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 void Sculptor::cutSphere (int  \i xcenter\i0 , int  \i ycenter\i0 , int  \i zcenter\i0 , int  \i radius\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Desativa os voxels em forma de esfera \par
+\pard\cbpat4\shading1000\li360\f2\fs16   211 \{\par
+  212     \cf2 bool\cf0  _x = \cf1 false\cf0 ;\par
+  213     \cf2 float\cf0  sphere;\par
+  214 \par
+  215     \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<=zcenter+radius; i++)\par
+  216     \{\par
+  217         \cf1 for\cf0 (\cf2 int\cf0  j = 0; j<=ycenter+radius; j++)\par
+  218         \{\par
+  219             \cf1 for\cf0 (\cf2 int\cf0  k = 0; k<=xcenter+radius; k++)\par
+  220             \{\par
+  221                 sphere = pow((i-xcenter),2) + pow(((j-ycenter)),2) + pow(((k-zcenter)),2);\par
+  222                 \cf1 if\cf0 (sphere <= pow(radius,2))\par
+  223                 \{\par
+  224                     v[i][j][k].isOn = _x;\par
+  225                 \}\par
+  226             \}\par
+  227         \}\par
+  228     \}\par
+  229 \par
+  230 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 void Sculptor::cutVoxel (int  \i x\i0 , int  \i y\i0 , int  \i z\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Desativa um elemento da matriz \par
+\pard\cbpat4\shading1000\li360\f2\fs16   127 \{\par
+  128     \cf2 bool\cf0  _x = \cf1 false\cf0 ;\par
+  129 \par
+  130     v[x][y][z].isOn = _x;\par
+  131 \par
+  132 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 void Sculptor::print ()\par
+void Sculptor::printMatriz ()\par
+\pard\cbpat4\shading1000\li360\b0\f2\fs16    85 \{\par
+   86     \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<np; i++)\par
+   87     \{\par
+   88         \cf1 for\cf0 (\cf2 int\cf0  j = 0; j<nl; j++)\par
+   89         \{\par
+   90             \cf1 for\cf0 (\cf2 int\cf0  k = 0; k<nc; k++)\par
+   91             \{\par
+   92                 \cf1 if\cf0 (v[i][j][k].isOn == \cf1 true\cf0 )\par
+   93                 \{\par
+   94                     cout << \cf3 "1 "\cf0 ;\par
+   95                 \}\par
+   96                 \cf1 else\cf0\par
+   97                 \{\par
+   98                     cout << \cf3 "0 "\cf0 ;\par
+   99                 \}\par
+  100             \}\par
+  101             cout << endl;\par
+  102         \}\par
+  103         cout << endl;\par
+  104     \}\par
+  105 \par
+  106 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 void Sculptor::putBox (int  \i x0\i0 , int  \i y0\i0 , int  \i z0\i0 , int  \i x1\i0 , int  \i y1\i0 , int  \i z1\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Ativa os voxels em forma de paralelepipedo \par
+\pard\cbpat4\shading1000\li360\f2\fs16   139 \{\par
+  140     \cf2 bool\cf0  _x = \cf1 true\cf0 ;\par
+  141 \par
+  142     \cf1 for\cf0 (\cf2 int\cf0  i = z0; i<=z1; i++)\par
+  143     \{\par
+  144         \cf1 for\cf0 (\cf2 int\cf0  j = y0; j<=y1; j++)\par
+  145         \{\par
+  146             \cf1 for\cf0 (\cf2 int\cf0  k = x0; k<=x1; k++)\par
+  147             \{\par
+  148                     v[i][j][k].isOn = _x;\par
+  149                     v[i][j][k].r = r; v[i][j][k].g = g; v[i][j][k].b = b;\par
+  150                     v[i][j][k].a = a;\par
+  151             \}\par
+  152         \}\par
+  153     \}\par
+  154 \par
+  155 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 void Sculptor::putEllipsoid (int  \i xcenter\i0 , int  \i ycenter\i0 , int  \i zcenter\i0 , int  \i _rx\i0 , int  \i _ry\i0 , int  \i _rz\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Ativa os voxels em forma de um elipsoide \par
+\pard\cbpat4\shading1000\li360\f2\fs16   237 \{\par
+  238     \cf2 bool\cf0  _x = \cf1 true\cf0 ;\par
+  239     \cf2 float\cf0  elipse;\par
+  240     \cf2 float\cf0  rx = _rx;\par
+  241     \cf2 float\cf0  ry = _ry;\par
+  242     \cf2 float\cf0  rz = _rz;\par
+  243 \par
+  244     \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<=zcenter+rz; i++)\par
+  245     \{\par
+  246         \cf1 for\cf0 (\cf2 int\cf0  j = 0; j<=ycenter+ry; j++)\par
+  247         \{\par
+  248             \cf1 for\cf0 (\cf2 int\cf0  k = 0; k<=xcenter+rx; k++)\par
+  249             \{\par
+  250                 elipse = pow(((i-xcenter)/rx),2) + pow(((j-ycenter)/ry),2) + pow(((k-zcenter)/rz),2);\par
+  251                 \cf1 if\cf0 (elipse <=1)\par
+  252                 \{\par
+  253                         v[i][j][k].isOn = _x;\par
+  254                         v[i][j][k].r = r; v[i][j][k].g = g; v[i][j][k].b = b;\par
+  255                         v[i][j][k].a = a;\par
+  256                 \}\par
+  257             \}\par
+  258         \}\par
+  259     \}\par
+  260 \par
+  261 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 void Sculptor::putSphere (int  \i xcenter\i0 , int  \i ycenter\i0 , int  \i zcenter\i0 , int  \i radius\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Ativa os voxels em forma de esfera \par
+\pard\cbpat4\shading1000\li360\f2\fs16   183 \{\par
+  184     \cf2 bool\cf0  _x = \cf1 true\cf0 ;\par
+  185     \cf2 float\cf0  sphere;\par
+  186 \par
+  187     \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<=zcenter+radius; i++)\par
+  188     \{\par
+  189         \cf1 for\cf0 (\cf2 int\cf0  j = 0; j<=ycenter+radius; j++)\par
+  190         \{\par
+  191             \cf1 for\cf0 (\cf2 int\cf0  k = 0; k<=xcenter+radius; k++)\par
+  192             \{\par
+  193                 sphere = pow((k-xcenter),2) + pow(((j-ycenter)),2) + pow(((i-zcenter)),2);\par
+  194                 \cf1 if\cf0 (sphere <= pow(radius,2))\par
+  195                 \{\par
+  196                         v[i][j][k].isOn = _x;\par
+  197                         v[i][j][k].r = r; v[i][j][k].g = g; v[i][j][k].b = b;\par
+  198                         v[i][j][k].a = a;\par
+  199                 \}\par
+  200             \}\par
+  201         \}\par
+  202     \}\par
+  203 \par
+  204 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 void Sculptor::putVoxel (int  \i x\i0 , int  \i y\i0 , int  \i z\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Ativa um elemento da matriz \par
+\pard\cbpat4\shading1000\li360\f2\fs16   113 \{\par
+  114     \cf2 bool\cf0  _x = \cf1 true\cf0 ;\par
+  115 \par
+  116     v[x][y][z].isOn = _x;\par
+  117     v[x][y][z].r = r; v[x][y][z].g = g; v[x][y][z].b = b;\par
+  118     v[x][y][z].a = a;\par
+  119 \par
+  120 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 void Sculptor::setColor (float  \i _r\i0 , float  \i _g\i0 , float  \i _b\i0 , float  \i _a\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Funcao para alterar a cor dos blocos desenhados \par
+\pard\cbpat4\shading1000\li360\f2\fs16    76 \{\par
+   77     r = _r;\par
+   78     g = _g;\par
+   79     b = _b;\par
+   80     a = _a;\par
+   81 \par
+   82 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 void Sculptor::writeOFF (string  \i str\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Escreve a escultura em formato OFF \par
+\pard\cbpat4\shading1000\li360\f2\fs16   369                                  \{\par
+  370 \par
+  371     ofstream f_out;\par
+  372     f_out.open(\cf3 "filenameOFF.txt"\cf0 );\par
+  373 \par
+  374     \cf1 if\cf0 (! f_out.good())\par
+  375     \{\par
+  376         cout << \cf3 "Falha ao criar arquivo\\n"\cf0 ;\par
+  377     \}\par
+  378     \cf1 else\cf0\par
+  379         cout << \cf3 "Arquivo criado!\\n"\cf0 ;\par
+  380 \par
+  381     \cf2 int\cf0  totalDeElementos = nc*nl*np;\par
+  382 \par
+  383     \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<np; i++)\par
+  384     \{\par
+  385         \cf1 for\cf0 (\cf2 int\cf0  j = 0; j<nl; j++)\par
+  386         \{\par
+  387             \cf1 for\cf0 (\cf2 int\cf0  k = 0; k<nc; k++)\par
+  388             \{\par
+  389                 \cf1 if\cf0 (v[i][j][k].isOn == \cf1 false\cf0 )\par
+  390                 \{\par
+  391                     totalDeElementos--;\par
+  392                 \}\par
+  393             \}\par
+  394         \}\par
+  395     \}\par
+  396 \par
+  397     str += \cf3 "OFF\\n"\cf0 ;\par
+  398     str += to_string(totalDeElementos*8) + \cf3 " "\cf0  + to_string(totalDeElementos*6) + \cf3 " "\cf0  + \cf3 "0\\n"\cf0 ;\par
+  399 \par
+  400     \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<np; i++)\par
+  401     \{\par
+  402         \cf1 for\cf0 (\cf2 int\cf0  j = 0; j<nl; j++)\par
+  403         \{\par
+  404             \cf1 for\cf0 (\cf2 int\cf0  k = 0; k<nc; k++)\par
+  405             \{\par
+  406                 \cf1 if\cf0 (v[i][j][k].isOn == \cf1 true\cf0 )\par
+  407                 \{\par
+  408                     str += to_string(k-0.5) + \cf3 " "\cf0  + to_string(j+0.5) + \cf3 " "\cf0  + to_string(i-0.5) + \cf3 "\\n"\cf0 ;\par
+  409                     str += to_string(k-0.5) + \cf3 " "\cf0  + to_string(j-0.5) + \cf3 " "\cf0  + to_string(i-0.5) + \cf3 "\\n"\cf0 ;\par
+  410                     str += to_string(k+0.5) + \cf3 " "\cf0  + to_string(j-0.5) + \cf3 " "\cf0  + to_string(i-0.5) + \cf3 "\\n"\cf0 ;\par
+  411                     str += to_string(k+0.5) + \cf3 " "\cf0  + to_string(j+0.5) + \cf3 " "\cf0  + to_string(i-0.5) + \cf3 "\\n"\cf0 ;\par
+  412                     str += to_string(k-0.5) + \cf3 " "\cf0  + to_string(j+0.5) + \cf3 " "\cf0  + to_string(i+0.5) + \cf3 "\\n"\cf0 ;\par
+  413                     str += to_string(k-0.5) + \cf3 " "\cf0  + to_string(j-0.5) + \cf3 " "\cf0  + to_string(i+0.5) + \cf3 "\\n"\cf0 ;\par
+  414                     str += to_string(k+0.5) + \cf3 " "\cf0  + to_string(j-0.5) + \cf3 " "\cf0  + to_string(i+0.5) + \cf3 "\\n"\cf0 ;\par
+  415                     str += to_string(k+0.5) + \cf3 " "\cf0  + to_string(j+0.5) + \cf3 " "\cf0  + to_string(i+0.5) + \cf3 "\\n"\cf0 ;\par
+  416                 \}\par
+  417             \}\par
+  418         \}\par
+  419     \}\par
+  420 \par
+  421     \cf2 int\cf0  cont = 0;\par
+  422 \par
+  423     \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<np; i++)\par
+  424     \{\par
+  425         \cf1 for\cf0 (\cf2 int\cf0  j = 0; j<nl; j++)\par
+  426         \{\par
+  427             \cf1 for\cf0 (\cf2 int\cf0  k = 0; k<nc; k++)\par
+  428             \{\par
+  429                 \cf1 if\cf0 (v[i][j][k].isOn == \cf1 true\cf0 )\par
+  430                 \{\par
+  431                     \cf2 int\cf0  pos = 8*cont;\par
+  432                     str += \cf3 "4 "\cf0  + to_string(pos) + \cf3 " "\cf0  + to_string(pos+3) + \cf3 " "\cf0  + to_string(pos+2) + \cf3 " "\cf0  + to_string(pos+1) + \cf3 " "\cf0  + to_string(v[i][j][k].r) + \cf3 " "\cf0  + to_string(v[i][j][k].g) + \cf3 " "\cf0  + to_string(v[i][j][k].b) + \cf3 " "\cf0  + to_string(v[i][j][k].a) + \cf3 "\\n"\cf0 ;\par
+  433                     str += \cf3 "4 "\cf0  + to_string(pos+4) + \cf3 " "\cf0  + to_string(pos+5) + \cf3 " "\cf0  + to_string(pos+6) + \cf3 " "\cf0  + to_string(pos+7) + \cf3 " "\cf0  + to_string(v[i][j][k].r) + \cf3 " "\cf0  + to_string(v[i][j][k].g) + \cf3 " "\cf0  + to_string(v[i][j][k].b) + \cf3 " "\cf0  + to_string(v[i][j][k].a) + \cf3 "\\n"\cf0 ;\par
+  434                     str += \cf3 "4 "\cf0  + to_string(pos) + \cf3 " "\cf0  + to_string(pos+1) + \cf3 " "\cf0  + to_string(pos+5) + \cf3 " "\cf0  + to_string(pos+4) + \cf3 " "\cf0  + to_string(v[i][j][k].r) + \cf3 " "\cf0  + to_string(v[i][j][k].g) + \cf3 " "\cf0  + to_string(v[i][j][k].b) + \cf3 " "\cf0  + to_string(v[i][j][k].a) + \cf3 "\\n"\cf0 ;\par
+  435                     str += \cf3 "4 "\cf0  + to_string(pos) + \cf3 " "\cf0  + to_string(pos+4) + \cf3 " "\cf0  + to_string(pos+7) + \cf3 " "\cf0  + to_string(pos+3) + \cf3 " "\cf0  + to_string(v[i][j][k].r) + \cf3 " "\cf0  + to_string(v[i][j][k].g) + \cf3 " "\cf0  + to_string(v[i][j][k].b) + \cf3 " "\cf0  + to_string(v[i][j][k].a) + \cf3 "\\n"\cf0 ;\par
+  436                     str += \cf3 "4 "\cf0  + to_string(pos+3) + \cf3 " "\cf0  + to_string(pos+7) + \cf3 " "\cf0  + to_string(pos+6) + \cf3 " "\cf0  + to_string(pos+2) + \cf3 " "\cf0  + to_string(v[i][j][k].r) + \cf3 " "\cf0  + to_string(v[i][j][k].g) + \cf3 " "\cf0  + to_string(v[i][j][k].b) + \cf3 " "\cf0  + to_string(v[i][j][k].a) + \cf3 "\\n"\cf0 ;\par
+  437                     str += \cf3 "4 "\cf0  + to_string(pos+1) + \cf3 " "\cf0  + to_string(pos+2) + \cf3 " "\cf0  + to_string(pos+6) + \cf3 " "\cf0  + to_string(pos+5) + \cf3 " "\cf0  + to_string(v[i][j][k].r) + \cf3 " "\cf0  + to_string(v[i][j][k].g) + \cf3 " "\cf0  + to_string(v[i][j][k].b) + \cf3 " "\cf0  + to_string(v[i][j][k].a) + \cf3 "\\n"\cf0 ;\par
+  438                     cont++;\par
+  439                 \}\par
+  440             \}\par
+  441         \}\par
+  442     \}\par
+  443 \par
+  444     f_out << str;\par
+  445     f_out.close();\par
+  446 \}\par
+\pard\keepn\s4\sb240\sa60\b\f1\fs20 void Sculptor::writeVECT (string  \i str\i0 )\par
+\pard\li360\sb30\sa60\qj\b0\f0\fs22 Escreve a escultura em formato VECT \par
+\pard\cbpat4\shading1000\li360\f2\fs16   294 \{\par
+  295     ofstream f_out;\par
+  296     f_out.open(\cf3 "filenameVECT.txt"\cf0 );\par
+  297 \par
+  298     \cf1 if\cf0 (! f_out.good())\par
+  299     \{\par
+  300         cout << \cf3 "Falha ao criar arquivo\\n"\cf0 ;\par
+  301     \}\par
+  302     \cf1 else\cf0\par
+  303         cout << \cf3 "Arquivo criado!\\n"\cf0 ;\par
+  304 \par
+  305     \cf2 int\cf0  totalDeElementos = nc*nl*np;\par
+  306 \par
+  307     \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<np; i++)\par
+  308     \{\par
+  309         \cf1 for\cf0 (\cf2 int\cf0  j = 0; j<nl; j++)\par
+  310         \{\par
+  311             \cf1 for\cf0 (\cf2 int\cf0  k = 0; k<nc; k++)\par
+  312             \{\par
+  313                 \cf1 if\cf0 (v[i][j][k].isOn == \cf1 false\cf0 )\par
+  314                 \{\par
+  315                     totalDeElementos--;\par
+  316                 \}\par
+  317             \}\par
+  318         \}\par
+  319     \}\par
+  320 \par
+  321     str += \cf3 "VECT\\n"\cf0 ;\par
+  322     str += to_string(totalDeElementos) + \cf3 " "\cf0  + to_string(totalDeElementos) + \cf3 " "\cf0  + to_string(totalDeElementos) + \cf3 "\\n"\cf0 ;\par
+  323 \par
+  324     \cf1 for\cf0  (\cf2 int\cf0  j = 0; j<=1; j++)\par
+  325     \{\par
+  326         \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<totalDeElementos; i++)\par
+  327         \{\par
+  328             str += \cf3 "1 "\cf0 ;\par
+  329         \}\par
+  330         str += \cf3 "\\n"\cf0 ;\par
+  331     \}\par
+  332 \par
+  333     \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<np; i++)\par
+  334     \{\par
+  335         \cf1 for\cf0 (\cf2 int\cf0  j = 0; j<nl; j++)\par
+  336         \{\par
+  337             \cf1 for\cf0 (\cf2 int\cf0  k = 0; k<nc; k++)\par
+  338             \{\par
+  339                 \cf1 if\cf0 (v[i][j][k].isOn == \cf1 true\cf0 )\par
+  340                 \{\par
+  341                     str += to_string(i) + \cf3 " "\cf0  + to_string(j) + \cf3 " "\cf0  + to_string(k) + \cf3 "\\n"\cf0  ;\par
+  342                 \}\par
+  343             \}\par
+  344         \}\par
+  345     \}\par
+  346 \par
+  347     \cf1 for\cf0 (\cf2 int\cf0  i = 0; i<np; i++)\par
+  348     \{\par
+  349         \cf1 for\cf0 (\cf2 int\cf0  j = 0; j<nl; j++)\par
+  350         \{\par
+  351             \cf1 for\cf0 (\cf2 int\cf0  k = 0; k<nc; k++)\par
+  352             \{\par
+  353                 \cf1 if\cf0 (v[i][j][k].isOn == \cf1 true\cf0 )\par
+  354                 \{\par
+  355                     str += to_string(v[i][j][k].r) + \cf3 " "\cf0  + to_string(v[i][j][k].g) + \cf3 " "\cf0  + to_string(v[i][j][k].b) + \cf3 " "\cf0  + to_string(v[i][j][k].a) + \cf3 "\\n"\cf0  ;\par
+  356                 \}\par
+  357             \}\par
+  358         \}\par
+  359     \}\par
+  360 \par
+  361     f_out << str;\par
+  362     f_out.close();\par
+  363 \}\par
+\pard\brdrb\brdrs\brdrw5\brsp20 \b\f1\fs20\par
+\pard\keepn\s4\sb240\sa60 A documenta\'e7\'e3o para essa classe foi gerada a partir do seguinte arquivo:\par
+\pard{\pntext\f0 1)\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta)}}
+\fi-360\li720\tx720\b0\f0 Documenta\'e7\'e3o2/\b sculptor.cpp\b0\par
+\pard\keepn\s1\sb240\sa60\kerning36\b\f1\fs36 Arquivos\par
+\pard\keepn\s2\sb240\sa60\kerning28\fs28 Refer\'eancia do Arquivo Documenta\'e7\'e3o2/sculptor.cpp\par
+\pard\kerning0\b0\f2\fs22 #include "sculptor.h"\f0\par
+\f2 #include <iostream>\f0\par
+\f2 #include <fstream>\f0\par
+\f2 #include <string>\f0\par
+\f2 #include <math.h>\f0\par
+\pard\keepn\s3\sb240\sa60\b\f1\fs24 Componentes\par
+\pard{\pntext\f0 1)\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta)}}
+\fi-360\li360\tx360\b0\f0\fs20 class \b Sculptor\b0\par
+\pard\keepn\s1\sb240\sa60\kerning36\b\f1\fs36 Sum\'e1rio\par
+\pard\sa200\sl276\slmult1\kerning0\b0\f0\fs24 INDEX\par
+}
+ 

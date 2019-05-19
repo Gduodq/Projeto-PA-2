@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include <math.h>
+#include <iostream>
 
 using namespace std;
 /**
@@ -25,6 +26,7 @@ Sculptor::Sculptor(int nx, int ny, int nz)
     {
         v[0][i] = v[0][i-1] + nc;
     }
+    v[4][6][6].isOn = false;
 }
 /**
 *Destrutor da Classe Sculptor
@@ -34,17 +36,6 @@ Sculptor::~Sculptor()
     delete v;
     delete v[0];
     delete v[0][0];
-
-}
-/**
-*Função para alterar a cor dos blocos desenhados
-*/
-void Sculptor::setColor(float _r, float _g, float _b, float _a)
-{
-    r = _r;
-    g = _g;
-    b = _b;
-    a = _a;
 
 }
 
@@ -74,168 +65,28 @@ void Sculptor::printMatriz()
 /**
 *Ativa um elemento da matriz
 */
-void Sculptor::putVoxel(int x, int y, int z)
+void Sculptor::putVoxel(int nx, int ny, int nz, float nr, float ng, float nb, float na)
 {
-    bool _x = true;
-
-    v[x][y][z].isOn = _x;
-    v[x][y][z].r = r; v[x][y][z].g = g; v[x][y][z].b = b;
-    v[x][y][z].a = a;
-
+    if((nx>=0) && (nx<nc) && (ny>=0) && (ny<nl) && (nz>=0) && (nz<np))
+    {
+        v[nz][ny][nx].isOn = true;
+        v[nz][ny][nx].r = nr;
+        v[nz][ny][nx].g = ng;
+        v[nz][ny][nx].b = nb;
+        v[nz][ny][nx].a = na;
+    }
 }
 /**
 *Desativa um elemento da matriz
 */
-void Sculptor::cutVoxel(int x, int y, int z)
+void Sculptor::cutVoxel(int nx, int ny, int nz)
 {
-    bool _x = false;
-
-    v[x][y][z].isOn = _x;
-
-}
-/**
-*Ativa os voxels em forma de paralelepípedo
-*/
-void Sculptor::putBox(int x0, int y0, int z0, int x1, int y1, int z1)
-{
-    bool _x = true;
-
-    for(int i = z0; i<=z1; i++)
+    if((nx>=0) && (nx<nc) && (ny>=0) && (ny<nl) && (nz>=0) && (nz<np))
     {
-        for(int j = y0; j<=y1; j++)
-        {
-            for(int k = x0; k<=x1; k++)
-            {
-                    v[i][j][k].isOn = _x;
-                    v[i][j][k].r = r; v[i][j][k].g = g; v[i][j][k].b = b;
-                    v[i][j][k].a = a;
-            }
-        }
+        v[nz][ny][nx].isOn = false;
     }
-
 }
-/**
-*Desativa os voxels em forma de paralelepípedo
-*/
-void Sculptor::cutBox(int x0, int y0, int z0, int x1, int y1, int z1)
-{
-    bool _x = false;
 
-    for(int i = z0; i<=z1; i++)
-    {
-        for(int j = y0; j<=y1; j++)
-        {
-            for(int k = x0; k<=x1; k++)
-            {
-                v[i][j][k].isOn = _x;
-            }
-        }
-    }
-
-}
-/**
-*Ativa os voxels em forma de esfera
-*/
-void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
-{
-    bool _x = true;
-    float sphere;
-
-    for(int i = 0; i<=zcenter+radius; i++)
-    {
-        for(int j = 0; j<=ycenter+radius; j++)
-        {
-            for(int k = 0; k<=xcenter+radius; k++)
-            {
-                sphere = pow((k-xcenter),2) + pow(((j-ycenter)),2) + pow(((i-zcenter)),2);
-                if(sphere <= pow(radius,2))
-                {
-                        v[i][j][k].isOn = _x;
-                        v[i][j][k].r = r; v[i][j][k].g = g; v[i][j][k].b = b;
-                        v[i][j][k].a = a;
-                }
-            }
-        }
-    }
-
-}
-/**
-*Desativa os voxels em forma de esfera
-*/
-void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
-{
-    bool _x = false;
-    float sphere;
-
-    for(int i = 0; i<=zcenter+radius; i++)
-    {
-        for(int j = 0; j<=ycenter+radius; j++)
-        {
-            for(int k = 0; k<=xcenter+radius; k++)
-            {
-                sphere = pow((i-xcenter),2) + pow(((j-ycenter)),2) + pow(((k-zcenter)),2);
-                if(sphere <= pow(radius,2))
-                {
-                    v[i][j][k].isOn = _x;
-                }
-            }
-        }
-    }
-
-}
-/**
-*Ativa os voxels em forma de um elipsoide
-*/
-void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int _rx, int _ry, int _rz)
-{
-    bool _x = true;
-    float elipse;
-    float rx = _rx;
-    float ry = _ry;
-    float rz = _rz;
-
-    for(int i = 0; i<=zcenter+rz; i++)
-    {
-        for(int j = 0; j<=ycenter+ry; j++)
-        {
-            for(int k = 0; k<=xcenter+rx; k++)
-            {
-                elipse = pow(((i-xcenter)/rx),2) + pow(((j-ycenter)/ry),2) + pow(((k-zcenter)/rz),2);
-                if(elipse <=1)
-                {
-                        v[i][j][k].isOn = _x;
-                        v[i][j][k].r = r; v[i][j][k].g = g; v[i][j][k].b = b;
-                        v[i][j][k].a = a;
-                }
-            }
-        }
-    }
-
-}
-/**
-*Desativa os voxels em forma de um elipsoide
-*/
-void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
-{
-    bool _x = false;
-    float elipse;
-
-    for(int i = 0; i<=zcenter+rz; i++)
-    {
-        for(int j = 0; j<=ycenter+ry; j++)
-        {
-            for(int k = 0; k<=xcenter+rx; k++)
-            {
-                elipse = pow(((i-xcenter)/rx),2) + pow(((j-ycenter)/ry),2) + pow(((k-zcenter)/rz),2);
-                if(elipse <=1)
-                {
-                    v[i][j][k].isOn = _x;
-                }
-            }
-        }
-    }
-
-}
 /**
 *Escreve a escultura em formato VECT
 */
@@ -313,10 +164,11 @@ void Sculptor::writeVECT(string str)
 /**
 *Escreve a escultura em formato OFF
 */
-void Sculptor::writeOFF(string str){
+void Sculptor::writeOFF(string str)
+{
 
     ofstream f_out;
-    f_out.open("filenameOFF.txt");
+    f_out.open("filenameOFF.off");
 
     if(! f_out.good())
     {

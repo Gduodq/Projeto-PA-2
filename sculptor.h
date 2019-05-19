@@ -20,7 +20,7 @@ struct Voxel
 *Classe usada para esboçar o desenho
 */
 class Sculptor {
-private:
+protected:
   Voxel ***v;
   int nc,nl,np;
   float r,g,b,a;
@@ -30,17 +30,9 @@ public:
 */
   Sculptor(int nx, int ny, int nz);
   ~Sculptor();
-  void setColor(float _r, float _g, float _b, float _a);
-  void print();
   void printMatriz();
-  void putVoxel(int x, int y, int z);
+  void putVoxel(int nx, int ny, int nz, float nr, float ng, float nb, float na);
   void cutVoxel(int x, int y, int z);
-  void putBox(int x0, int x1, int y0, int y1, int z0, int z1);
-  void cutBox(int x0, int x1, int y0, int y1, int z0, int z1);
-  void putSphere(int xcenter, int ycenter, int zcenter, int radius);
-  void cutSphere(int xcenter, int ycenter, int zcenter, int radius);
-  void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
-  void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
   void writeOFF(string filename);
   void writeVECT(string filename);
 };
